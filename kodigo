@@ -1,0 +1,24 @@
+1) Story about the friend from the 90s who wants to get his guestbook running.
+2) In order to do this, we need to persist it somewhere - the database.
+3) We're going to use SQLAlchemy.
+  - it's an ORM. It maps the database schema in the language that we know and use (python)
+  - has a declarative syntax (entites are defined as classes)
+  - use any relational database you want. and switch anytime.
+4) Show SQLAlchemy documentation (learn how it can be installed and so on..)
+5) Now, show the website. We're not going to improve the face but focus on
+  making the functionality work.
+6) We'll use the flask extension since we're using flask (flask has extensions too).
+
+And for the actual coding goodies...
+7) Show the initial configuration (engine configuration) and the integration with Flask
+8) Declare the table (class Entry: name, email, content), then build the database.
+9) Now, demonstrate how stuff can be saved. (db.session.add; db.session.commit)
+
+10) It doesn't show the guestlogs yet. We need to query the guestbook items.
+  - show how to query the guestlogs.
+  - print content first.
+
+11) Now, how do we show them inside the webpage?
+  - we pass the context via render_template
+
+12) Now that it's inside the webpage. printing them normally doesn't show the contents.

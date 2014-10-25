@@ -1,0 +1,16 @@
+mysql:
+  image: orchardup/mysql
+  volumes:
+    - ./db:/var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+
+sqlalchemy:
+  build: .
+  command: python server.py
+  volumes:
+    - .:/opt/app
+  links:
+    - mysql:mysql
+  ports:
+    - 5000:5000

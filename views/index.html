@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#guestbook {
+  margin: auto;
+  width: 500px;
+}
+#guestbook input,
+#guestbook textarea {
+  height: 2em;
+  width: 100%;
+}
+#guestbook textarea {
+  height: 5em;
+}
+</style>
+</head>
+
+<body>
+  <div id="guestbook">
+    <marquee><h1>Guestbook (Coz we're in the 90s)</h1></marquee>
+    <form method=POST action=/guestbook>
+      <input type=text name=author placeholder=Name></input><br />
+      <input type=text name=email placeholder=Email></input><br />
+      <textarea name=content value=Name placeholder=Content></textarea><br />
+      <input type=submit value=Post></input><br />
+    </form>
+  </div>
+</body>
+</html>
