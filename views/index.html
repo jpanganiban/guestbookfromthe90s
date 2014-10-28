@@ -6,7 +6,8 @@ body {
   background-image: url('/static/bg.gif');
   background-color: #000;
 }
-#guestbook {
+#guestbook,
+#guestlogs {
   padding: 20px;
   background-color: #fff;
   margin: auto;
@@ -36,5 +37,16 @@ body {
       <input type=submit value=Post></input><br />
     </form>
   </div>
+
+  <ul id="guestlogs">
+    {% for log in logs %}
+    <li class="guestlog">
+      <p class="name">{{ log.name }}</p>
+      <p class="email">{{ log.email }}</p>
+      <p class="content">{{ log.content }}</p>
+      <p class="delete"><a href="/guestlogs/{{ log.id }}">x</a></p>
+    </li>
+    {% endfor %}
+  </ul>
 </body>
 </html>
